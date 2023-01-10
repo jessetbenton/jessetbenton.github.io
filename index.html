@@ -1,0 +1,56 @@
+<html>
+    <!-- NOTE: make sure you copy this file to s3 for UAT if you change it
+         aws s3 cp test/training.html s3://zrware-reservations/2020/tests/training.html
+    -->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+        <!-- <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet"> -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://zrware-reservations.s3.us-west-2.amazonaws.com/2021/demo/latest.css">
+        <script src="https://zrware-reservations.s3.us-west-2.amazonaws.com/cookie/demo/latest.js" type="text/javascript"></script>
+        <script src="https://zrware-reservations.s3.us-west-2.amazonaws.com/2021/demo/latest.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div style="height: 300px;">Some header content</div>
+        <div id="scrolltome" style="height: 150px;">optional scroll to me content</div>
+        <!-- For the focus groups, chris didn't want this url influencing stuff -->
+        <!-- <div style="background-image:url(https://www.zerorezstl.com/wp-content/uploads/2015/06/quote.jpg);height:550px;"></div> -->
+        <div id="root" style="max-width: 1024px;margin:auto;"></div>
+        <div style="height: 300px;">Some footer content</div>
+    </body>
+
+    <script type="text/javascript">
+      window.ZrWareReservations2021({
+            serverUrl: 'https://training.zrware.com',
+            element: 'root',
+            franchise: 118,
+            // scrollToElement: 'TOP',
+            dev: false,
+
+            trackLead: function () {
+              // fbq('track', 'Lead');
+            },
+
+            trackPhoneClick: function() {
+              // alert('gtag tracking phone click!')
+            },
+
+            trackSmsClick: function() {
+              // alert('gtag tracking sms click!')
+            },
+
+            trackConversion: function () {
+              // fbq('track', 'Conversion');
+            },
+
+            trackSimpleFormSubmit: function () {
+              //fbq('track', 'Form Submit')
+            },
+
+            trackBusinessFormSubmit: function() {
+            //fbq('track', 'Business Form Submit')
+            }
+        })
+    </script>
+</html>
